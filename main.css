@@ -201,8 +201,9 @@ img {
     text-decoration: none;
 }
 .services-home img {
-    height: 400px;
-    width: auto;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
     margin: auto;
     margin-top: 50px;
     display: block;
@@ -210,19 +211,20 @@ img {
 .menu span {
     display: block;
     position: relative;
-    top: 25px;
+    top: 0px;
     font-family: "lily script one", sans-serif;
     font-size: 36px;
     font-weight: 100;
     color: rgb(91, 72, 72);
     margin: auto;
     max-width: 500px;
+    padding: 30px;
 }
 .menu button {
     display: block;
     margin: auto;
     position: relative;
-    top: 40px;
+    top: 0px;
     background-color: #fcf7f0;;
     color:#8B7355;
     border: none;
