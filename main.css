@@ -30,7 +30,7 @@ header {
 header img {
     display: flex;
     margin: auto;
-    width: 100px;
+    width: 90px;
     height: 90px;
     margin-bottom: 10px;
 }
@@ -500,4 +500,66 @@ button {
 }
 a {
     text-decoration: none;
+}
+@media (min-width: 600px) and (max-width: 900px) {
+    .menu span {
+        font-size: 28px;
+        padding: 10px;
+    }
+}
+@media (min-width: 600px) {
+    header {
+         max-width: 1100px;
+         margin: 0;
+    }
+	header span {
+        display: block;
+    }
+    nav {
+        display: none;
+	}
+    .off-screen-menu {
+        background-color: #fcf7f0;
+        color: #8B7355;
+        font-size: 18px;
+        right: 0;
+        height: 110px;
+        width: auto;
+        text-transform: uppercase;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        padding-right: 20px;
+    }
+	ul {
+        display: flex;
+        margin-right: auto;
+        gap: 45px;
+        padding: 0;
+    }
+    .off-screen-menu ul li a {
+        color:#8B7355
+    }
+    .services-home {
+        display: flex;
+        align-items: stretch;
+        gap: 0;
+        justify-content: center;
+    }
+    .services-home img {
+        height: 300px;
+        width: auto;
+        margin: 0;
+        max-width: 100%;
+    }
+    .menu {
+        height: 300px;
+        width: auto;
+        margin: 0;
+        max-width: 450px;
+        align-items: center;
+    }
+    .menu span {
+        align-items: center;
+    }
 }
