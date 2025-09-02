@@ -43,7 +43,8 @@ header img {
     font-family: "Lily Script One", system-ui;
     font-size: 30px;
     text-align: center;
-    color: #fcf7f0;              
+    color: #fcf7f0;
+    position: relative;              
 }
 .hero h1 {
     position: relative;
@@ -70,7 +71,36 @@ a:visited {
 a:hover {
     color: #6F86FF;
 }
+.butterfly {
+    width: 30px;
+    transform-origin: center center;
+    transform: rotate(30deg);
+    display: inline;
+    fill: #fcf7f0;
+    vertical-align: text-top;
+}
 
+.left-wing {
+  animation: left 0.5s linear 6 alternate;
+  transform-origin: calc(50% - 10px) 0;
+}
+
+.right-wing {
+  animation: right 0.5s linear 6 alternate;  
+  transform-origin: calc(50% + 10px) 0;
+}
+
+@keyframes left {
+  to {
+    transform:rotateY(80deg)
+  }
+}
+
+@keyframes right {
+  to {
+    transform:rotateY(-80deg);
+  }
+}
 body {
     background-color:#fcf7f0;
     font-family: sans-serif;
@@ -167,17 +197,22 @@ nav {
     padding: 30px;
 }
 .introduction h2 {
+    margin-bottom: 20px;
+}
+h2 {
     text-align: center;
     text-transform: capitalize;
     font-size: 36px;
     font-weight: 100;
+    font-family: "lily script one", sans-serif;
+    color: rgb(91, 72, 72);
 }
 .introduction p {
     font-family: "lato", sans-serif;
     max-width: 900px;
     margin: auto;
 }
-img {
+.introduction h2 img {
     height: 70px;
     width: 60px;
 }
@@ -500,6 +535,48 @@ button {
 }
 a {
     text-decoration: none;
+}
+
+.gallery {
+    width: 300px;
+    display: flex;
+    overflow-x: scroll;
+}
+.gallery div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 20px;
+    flex: none;
+}
+.gallery div img {
+    width: 100%;
+    transition: transfom 0.5s;
+}
+.gallery::-webkit-scrollbar{
+    display: none;
+}
+.gallery-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+}
+#backBtn, #nextBtn {
+    width: 30px;
+    cursor: pointer;
+    margin: 25px;
+}
+.gallery div img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.distortion {
+    display: block;
+}
+.distortion img {
+    height: 300px;
+    width: 300px;
 }
 @media (min-width: 600px) and (max-width: 900px) {
     .menu span {
